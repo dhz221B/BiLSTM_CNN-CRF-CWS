@@ -54,12 +54,16 @@ def convert(sentence, corresponding_pre_label):
 if __name__ == '__main__':
     model = Model.Model()
     predict_label = []
-    for i in range(1, 4):
-        predict_label.extend(predict(pm.eva + str(i)))
+    # for i in range(1, 5):
+    #     predict_label.extend(predict(pm.pku + str(i)))
+    for i in range(1, 9):
+        predict_label.extend(predict(pm.msr + str(i)))
     # predict_label.extend(predict('./data/pku_test.utf8'))
     sentences = []
-    for i in range(1, 4):
-        sentences.extend(get_word_list(pm.eva + str(i)))
+    # for i in range(1, 5):
+    #     sentences.extend(get_word_list(pm.pku + str(i)))
+    for i in range(1, 9):
+        sentences.extend(get_word_list(pm.msr + str(i)))
     # sentences.extend(get_word_list('./data/pku_test.utf8'))
     # with open(pm.eva, 'r', encoding='utf-8') as fr:
     #     text = fr.readlines()
@@ -71,7 +75,7 @@ if __name__ == '__main__':
         s += CWS
         s += '\n'
 
-    with open('./data/pku_self.utf8', 'w', encoding='utf-8') as fw:
+    with open('./data/msr_test_result.utf8', 'w', encoding='utf-8') as fw:
         fw.write(s)
 
 

@@ -17,7 +17,9 @@ batch_size = 64
 # ！！！！将文本中所有句子长度统一设置为600字符！！！！！
 seq_max_len = 600
 # train = './data/WordSeg.txt'
-train = './data/pku_training.utf8'
+# train = './data/pku_training.utf8'
+train = './data/msr_training.utf8'
 test = './data/test.txt'
 # eva = './data/eva.txt'
-eva = './data/pku_test_'
+pku = './data/pku_test_'
+msr = './data/msr_test_'
